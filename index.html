@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+    <meta charset="utf-8" />
+
+    <meta name="keywords" content="html, css, javascript, jquery" />
+    <script>
+      var onLoadCall = function () {
+        console.log("Heelpooo");
+        var script = document.createElement("script");
+        
+        script.src = "//cdn.jsdelivr.net/npm/eruda";
+
+        document.body.appendChild(script);
+
+        script.onload = function () {
+          eruda.init();
+        };
+      };
+    </script>
+  </head>
+  <body onload="onLoadCall()">
+    <h1>Hello word</h1>
+  </body>
+</html>
